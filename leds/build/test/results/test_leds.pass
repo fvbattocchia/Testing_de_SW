@@ -1,0 +1,50 @@
+---
+:source:
+  :path: test
+  :file: test_leds.c
+:successes:
+- :test: test_LedsOffAfterCreate
+  :line: 13
+  :message: ''
+  :unity_test_time: 0
+- :test: test_TurnOnLedOne
+  :line: 19
+  :message: ''
+  :unity_test_time: 0
+- :test: test_TurnOffLedOne
+  :line: 24
+  :message: ''
+  :unity_test_time: 0
+- :test: test_TurnOnMultipleLeds
+  :line: 30
+  :message: ''
+  :unity_test_time: 0
+- :test: test_TurnOffAnyLed
+  :line: 36
+  :message: ''
+  :unity_test_time: 0
+- :test: test_TurnAllOn
+  :line: 42
+  :message: ''
+  :unity_test_time: 0
+- :test: test_TurnAllOff
+  :line: 47
+  :message: ''
+  :unity_test_time: 0
+- :test: test_GetStatusLed
+  :line: 53
+  :message: ''
+  :unity_test_time: 0
+- :test: test_LedMemoryIsNotReadable
+  :line: 64
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 9
+  :passed: 9
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.0012883849994977936

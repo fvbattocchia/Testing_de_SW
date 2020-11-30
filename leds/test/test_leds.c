@@ -7,8 +7,7 @@ void setUp(void) {
    Leds_Create(&ledsVirtuales);
 }
 
-void tearDown(void) {
-}
+
 /*Después de la inicialización todos los LEDs deben quedar apagados.*/
 void test_LedsOffAfterCreate(void) {
    uint16_t ledsVirtuales = 0xFFFF;

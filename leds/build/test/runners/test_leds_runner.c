@@ -18,7 +18,6 @@ extern void test_TurnOffAnyLed(void);
 extern void test_TurnAllOn(void);
 extern void test_TurnAllOff(void);
 extern void test_GetStatusLed(void);
-extern void test_LedMemoryIsNotReadable(void);
 
 
 /*=======Mock Management=====*/
@@ -34,6 +33,9 @@ static void CMock_Verify(void)
 static void CMock_Destroy(void)
 {
 }
+
+/*=======Teardown (stub)=====*/
+void tearDown(void) {}
 
 /*=======Test Reset Options=====*/
 void resetTest(void);
@@ -83,15 +85,14 @@ static void run_test(UnityTestFunction func, const char* name, int line_num)
 int main(void)
 {
   UnityBegin("test_leds.c");
-  run_test(test_LedsOffAfterCreate, "test_LedsOffAfterCreate", 13);
-  run_test(test_TurnOnLedOne, "test_TurnOnLedOne", 19);
-  run_test(test_TurnOffLedOne, "test_TurnOffLedOne", 24);
-  run_test(test_TurnOnMultipleLeds, "test_TurnOnMultipleLeds", 30);
-  run_test(test_TurnOffAnyLed, "test_TurnOffAnyLed", 36);
-  run_test(test_TurnAllOn, "test_TurnAllOn", 42);
-  run_test(test_TurnAllOff, "test_TurnAllOff", 47);
-  run_test(test_GetStatusLed, "test_GetStatusLed", 53);
-  run_test(test_LedMemoryIsNotReadable, "test_LedMemoryIsNotReadable", 64);
+  run_test(test_LedsOffAfterCreate, "test_LedsOffAfterCreate", 12);
+  run_test(test_TurnOnLedOne, "test_TurnOnLedOne", 18);
+  run_test(test_TurnOffLedOne, "test_TurnOffLedOne", 23);
+  run_test(test_TurnOnMultipleLeds, "test_TurnOnMultipleLeds", 29);
+  run_test(test_TurnOffAnyLed, "test_TurnOffAnyLed", 35);
+  run_test(test_TurnAllOn, "test_TurnAllOn", 41);
+  run_test(test_TurnAllOff, "test_TurnAllOff", 46);
+  run_test(test_GetStatusLed, "test_GetStatusLed", 51);
 
   return UnityEnd();
 }

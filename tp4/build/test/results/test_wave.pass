@@ -1,0 +1,99 @@
+---
+:source:
+  :path: test
+  :file: test_wave.c
+:successes:
+- :test: test_OpenFile
+  :line: 13
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseRiff
+  :line: 28
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseOverallSize
+  :line: 36
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseWave
+  :line: 42
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseFmtChunkMarker
+  :line: 50
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseLengthOfFmt
+  :line: 59
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseFormatype
+  :line: 64
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseChannels
+  :line: 72
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseSampleRate
+  :line: 77
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseByterate
+  :line: 82
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseBlockAlign
+  :line: 87
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseBitsPerSample
+  :line: 92
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseDataChunkHeader
+  :line: 97
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseDataSize
+  :line: 105
+  :message: ''
+  :unity_test_time: 0
+- :test: test_parseData
+  :line: 105
+  :message: ''
+  :unity_test_time: 0
+- :test: test_closeFile
+  :line: 127
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 16
+  :passed: 16
+  :failed: 0
+  :ignored: 0
+:stdout:
+- "/home/florencia/Especializacion/Testing_de_SW/Testing_de_SW/tp4/src/piano2.wav"
+- Opening  file..
+- "(1-4): RIFF "
+- "(5-8) Overall size: bytes:1210884, Kb:1182 "
+- "(9-12) Wave marker: WAVE"
+- "(13-16) Fmt marker: fmt"
+- "(17-20) Length of Fmt header: 16 "
+- "(21-22) Format type: 1 PCM "
+- "(23-24) Channels: 2 "
+- "(25-28) Sample rate: 48000"
+- "(29-32) Byte Rate: 192000 , Bit Rate:1536000"
+- "(33-34) Block Alignment: 4 "
+- "(35-36) Bits per sample: 16 "
+- "(37-40) Data Marker: data "
+- "(41-44) Size of data chunk: 1210848 "
+- Approx.Duration in seconds=6.306687
+- Approx.Duration in h:m:s=0:0:6.306
+- 'Number of samples:302712 '
+- Size of each sample:4 bytes
+- 'samples readed: 302712'
+- Closing file..
+:time: 0.008747624000534415

@@ -1,5 +1,7 @@
 #include "leds.h"
 
+
+#define LED(x) x-1
 static uint16_t * leds;
 static uint16_t estado;
 
@@ -9,7 +11,7 @@ enum {
 };
 
 static int Leds_ConvertirNumeroEnBit(int numero_led) {
-   return 1 << (numero_led - 1);
+   return 1 << LED(numero_led);//(numero_led - 1);
 }
 
 static void Leds_HardwareUpdate(void) {
@@ -43,5 +45,5 @@ void Led_TurnAllOff(void) {
 }
 
 int Led_GetStatus(int led){
-  return (estado & Leds_ConvertirNumeroEnBit(led))>>(led-1);
+  return (estado & Leds_ConvertirNumeroEnBit(led))>>LED(led);
 }

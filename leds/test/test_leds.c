@@ -44,6 +44,7 @@ void test_TurnAllOn(void) {
 }
 /*Se pueden apagar todos los LEDs de una vez.*/
 void test_TurnAllOff(void) {
+   Led_TurnAllOn();
    Led_TurnAllOff();
    TEST_ASSERT_EQUAL_HEX16(0, ledsVirtuales);
 }
@@ -51,9 +52,10 @@ void test_TurnAllOff(void) {
 void test_GetStatusLed(void) {
    int led_status;
    Led_TurnAllOff();
+   led_status=Led_GetStatus(5);
+   TEST_ASSERT_EQUAL_INT(0, led_status);
    Leds_TurnOn(5);
    led_status=Led_GetStatus(5);
    TEST_ASSERT_EQUAL_INT(1, led_status);
-   led_status=Led_GetStatus(3);
-   TEST_ASSERT_EQUAL_INT(0, led_status);
+
 }

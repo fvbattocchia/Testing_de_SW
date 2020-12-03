@@ -10,7 +10,7 @@ struct HEADER header;
 void setUp(void) {
 
 }
-void test_OpenFile(void) {
+void suiteSetUp(void) {
   char filename[1024];
 
    // get file path
@@ -124,6 +124,7 @@ void test_parseData(){
   TEST_ASSERT_EQUAL_INT(302712,i);
 }
 
-void test_closeFile(){
+int suiteTearDown(int failures){
   TEST_ASSERT_EQUAL_INT(OK,coseWaveFile());
+  return failures;
 }
